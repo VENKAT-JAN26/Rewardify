@@ -202,7 +202,7 @@ const WorkdayForm = () => {
                                             setFieldValue('workingdays', newWorkingDays);
                                         }}
                                     />
-                                    {option.key}
+                                           {' '} {option.key}
                                 </label>
                             ))}
                         </div>

@@ -13,7 +13,6 @@ const AddStock=({show,onClose,onCancel,product={},getproduct})=>{
         const response = await api.post(`${ADD_STOCK}${product._id}`, {
           stock: Number(stock),
         });
-         console.log(response)
         getproduct();
       }catch (error) {
         console.error('Error updating stock:', error);

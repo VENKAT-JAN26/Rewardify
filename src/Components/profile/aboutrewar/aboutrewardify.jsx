@@ -13,18 +13,26 @@ const ProfileAbout=()=>{
             <div className={style.aboutRewar_Block}>
                 <div>
                 <h4>About US</h4>
-                {showagree && <p>Lorem ipsum dolor sit amet consectetur. Nulla duis ornare arcu enim. 
-                    Placerat donec ipsum in vitae ante at orci. Lorem ipsum semper aliquam mauris ut eu id pellentesque libero.
-                     Ut massa ut amet et arcu non bibendum velit odio. Sed eu facilisi facilisis a suspendisse.
-                      Eu in amet gravida placerat sed volutpat. 
-                     Massa elementum risus elit bibendum a amet hac. Integer nunc dignissim ultrices quam venenatis.
-                      At etiam sem accumsan et elit. Velit mus felis quam donec faucibus nec nibh auctor dictum. Enim consequat a quisque facilisis. 
-                      Scelerisque turpis risus purus nisl ultricies faucibus odio tempus.
-                       Pellentesque amet enim enim volutpat vulputate. Nibh egestas in facilisi est volutpat magna porta. Semper facilisis nunc tortor scelerisque.
-                        Sem augue purus augue est tempor. Nunc tortor faucibus ullamcorper purus aliquam lectus.
-                         Mi integer a vulputate diam commodo cursus arcu. Lectus dignissim senectus sem mollis augue. arcu. 
-                         Lectus dignissim senectus sem mollis augue. arcu. Lectus dignissim senectus sem mollis augue. rcu. Lectus dignissim senectus sem mollis augue. vulputate.
-                     Nibh egestas in vulputate. Nibh egestas in vulputate. Nibh egestas in vulputate. Nibh egestas in .</p>}
+                {showagree && <p>
+                    Terms & Conditions
+Welcome to Rewarify! By using our platform, you agree to:
+
+Provide accurate account information.
+Use the platform only for lawful purposes.
+Respect intellectual property rights of Rewarify and third parties.
+Understand that product prices and offers are subject to change without notice.
+Comply with our return and refund policies for eligible products.
+We reserve the right to suspend accounts for violations and modify these terms at any time.
+
+Privacy Policy
+At Rewarify, we prioritize your privacy:
+
+We collect only necessary personal information for transactions and site performance.
+Data is protected using secure protocols and is not shared with unauthorized third parties.
+Cookies may be used to enhance user experience.
+Users can access, update, or delete personal information by contacting our support team.
+By using our services, you consent to the collection and use of your data as described. Updates to this policy will be communicated on the website.
+                    </p>}
                 </div>
               {showagree?<span onClick={()=>setshowagree(!showagree)}>{icons.deopuparrow}</span>:<span onClick={()=>setshowagree(!showagree)}>{icons.dropdownarrow}</span>}            
           </div>

@@ -1,48 +1,48 @@
-import { useLocation, useNavigate } from 'react-router-dom';
-import styles from './index.module.css';
-const StoreDataNav=()=>{
-    const navigate=useNavigate();
-    const location=useLocation();
-    const storeinfocircle=location.pathname === '/storeCreation' ? styles.circle_green:styles.circle;
-    const storedoccircle=location.pathname === '/storeCreation/storedocs'? styles.circle_green:styles.circle;
-    const storeagreecircle=location.pathname === '/storeCreation/storeAgeement'? styles.circle_green:styles.circle;
+// import { useLocation, useNavigate } from 'react-router-dom';
+// import styles from './index.module.css';
+// const StoreDataNav=()=>{
+//     const navigate=useNavigate();
+//     const location=useLocation();
+//     const storeinfocircle=location.pathname === '/storeCreation' ? styles.circle_green:styles.circle;
+//     const storedoccircle=location.pathname === '/storeCreation/storedocs'? styles.circle_green:styles.circle;
+//     const storeagreecircle=location.pathname === '/storeCreation/storeAgeement'? styles.circle_green:styles.circle;
 
-    return(
-        <div className={styles.store_create_form_navigator}>
-            <div >
-                    <div className={storeinfocircle}/>
-                    <hr className={styles.dotted_line}/>
-            </div>
-            <div onClick={(e)=>navigate('/storeCreation')}>
-                    <h6>Step 1</h6>
-                    <h4>Store Information</h4>
-                    <p>Owner name , Store location, Store address</p>
-                    <hr className={styles.solid_line} />
-            </div>
-            <div>
-                    <div className={storedoccircle}/>
-                    <hr className={styles.dotted_line}/>
-            </div>
-            <div onClick={(e)=>navigate('/storeCreation/storedocs')}>
-                    <h6>Step 2</h6>
-                    <h4>Store Document</h4>
-                    <p>GSTIN Number , PAN Number, Bank details</p>
-                    <hr className={styles.solid_line} />
-            </div> 
-            <div>
-                    <div className={storeagreecircle}/>
-                    <hr className={styles.dotted_line}/>
-            </div>
-            <div onClick={(e)=>navigate('/storeCreation/storeAgeement')}>
-                    <h6>Step 3</h6>
-                    <h4>Agreement</h4>
-                    <p>REWARDIFY partner Agreement</p>
-                    <hr className={styles.solid_line}/>
-            </div>  
-        </div>
-    )
-}
-export default StoreDataNav;
+//     return(
+//         <div className={styles.store_create_form_navigator}>
+//             <div >
+//                     <div className={storeinfocircle}/>
+//                     <hr className={styles.dotted_line}/>
+//             </div>
+//             <div onClick={(e)=>navigate('/storeCreation')}>
+//                     <h6>Step 1</h6>
+//                     <h4>Store Information</h4>
+//                     <p>Owner name , Store location, Store address</p>
+//                     <hr className={styles.solid_line} />
+//             </div>
+//             <div>
+//                     <div className={storedoccircle}/>
+//                     <hr className={styles.dotted_line}/>
+//             </div>
+//             <div onClick={(e)=>navigate('/storeCreation/storedocs')}>
+//                     <h6>Step 2</h6>
+//                     <h4>Store Document</h4>
+//                     <p>GSTIN Number , PAN Number, Bank details</p>
+//                     <hr className={styles.solid_line} />
+//             </div> 
+//             <div>
+//                     <div className={storeagreecircle}/>
+//                     <hr className={styles.dotted_line}/>
+//             </div>
+//             <div onClick={(e)=>navigate('/storeCreation/storeAgeement')}>
+//                     <h6>Step 3</h6>
+//                     <h4>Agreement</h4>
+//                     <p>REWARDIFY partner Agreement</p>
+//                     <hr className={styles.solid_line}/>
+//             </div>  
+//         </div>
+//     )
+// }
+// export default StoreDataNav;
 
 // import { useLocation, useNavigate } from 'react-router-dom';
 // import styles from './index.module.css';
@@ -85,3 +85,206 @@ export default StoreDataNav;
 // };
 
 // export default StoreDataNav;
+
+// import { useLocation, useNavigate } from 'react-router-dom';
+// import { useEffect, useState } from 'react';
+// import styles from './index.module.css';
+
+// const StoreDataNav = () => {
+//   const navigate = useNavigate();
+//   const location = useLocation();
+//   const [activePath, setActivePath] = useState(location.pathname);
+
+//   // Update the active path when the location changes
+//   useEffect(() => {
+//     console.log("Current Path:", location.pathname); // Debugging log
+//     setActivePath(location.pathname);
+//   }, [location]);
+
+//   // Conditionally apply styles based on the current path
+//   const storeinfocircle = activePath === '/storeCreation' ? styles.circle_green : styles.circle;
+//   const storedoccircle = activePath === '/storeCreation/storedocs' ? styles.circle_green : styles.circle;
+//   const storeagreecircle = activePath === '/storeCreation/storeAgreement' ? styles.circle_green : styles.circle;
+
+//   return (
+//     <div className={styles.store_create_form_navigator}>
+//       {/* Step 1 */}
+//       <div>
+//         <div className={storeinfocircle} />
+//         <hr className={styles.dotted_line} />
+//       </div>
+//       <div onClick={() => navigate('/storeCreation')}>
+//         <h6>Step 1</h6>
+//         <h4>Store Information</h4>
+//         <p>Owner name, Store location, Store address</p>
+//         <hr className={styles.solid_line} />
+//       </div>
+
+//       {/* Step 2 */}
+//       <div>
+//         <div className={storedoccircle} />
+//         <hr className={styles.dotted_line} />
+//       </div>
+//       <div onClick={() => navigate('/storeCreation/storedocs')}>
+//         <h6>Step 2</h6>
+//         <h4>Store Document</h4>
+//         <p>GSTIN Number, PAN Number, Bank details</p>
+//         <hr className={styles.solid_line} />
+//       </div>
+
+//       {/* Step 3 */}
+//       <div>
+//         <div className={storeagreecircle} />
+//         <hr className={styles.dotted_line} />
+//       </div>
+//       <div onClick={() => navigate('/storeCreation/storeAgreement')}>
+//         <h6>Step 3</h6>
+//         <h4>Agreement</h4>
+//         <p>REWARDIFY Partner Agreement</p>
+//         <hr className={styles.solid_line} />
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default StoreDataNav;
+
+// import { useLocation, useNavigate } from 'react-router-dom';
+// import styles from './index.module.css';
+
+// const StoreDataNav = () => {
+//   const navigate = useNavigate();
+//   const location = useLocation();
+
+//   // Update circle styles based on the current page and progression
+//   const storeinfocircle =
+//     location.pathname === '/storeCreation' ||
+//     location.pathname === '/storeCreation/storedocs' ||
+//     location.pathname === '/storeCreation/storeAgreement'
+//       ? styles.circle_green
+//       : styles.circle;
+
+//   const storedoccircle =
+//     location.pathname === '/storeCreation/storedocs' ||
+//     location.pathname === '/storeCreation/storeAgreement'
+//       ? styles.circle_green
+//       : styles.circle;
+
+//   const storeagreecircle =
+//     location.pathname === '/storeCreation/storeAgreement'
+//       ? styles.circle_green
+//       : styles.circle;
+
+//   return (
+//     <div className={styles.store_create_form_navigator}>
+//       {/* Step 1 */}
+//       <div>
+//         <div className={storeinfocircle} />
+//         <hr className={styles.dotted_line} />
+//       </div>
+//       <div onClick={() => navigate('/storeCreation')}>
+//         <h6>Step 1</h6>
+//         <h4>Store Information</h4>
+//         <p>Owner name, Store location, Store address</p>
+//         <hr className={styles.solid_line} />
+//       </div>
+
+//       {/* Step 2 */}
+//       <div>
+//         <div className={storedoccircle} />
+//         <hr className={styles.dotted_line} />
+//       </div>
+//       <div onClick={() => navigate('/storeCreation/storedocs')}>
+//         <h6>Step 2</h6>
+//         <h4>Store Document</h4>
+//         <p>GSTIN Number, PAN Number, Bank details</p>
+//         <hr className={styles.solid_line} />
+//       </div>
+
+//       {/* Step 3 */}
+//       <div>
+//         <div className={storeagreecircle} />
+//         <hr className={styles.dotted_line} />
+//       </div>
+//       <div onClick={() => navigate('/storeCreation/storeAgreement')}>
+//         <h6>Step 3</h6>
+//         <h4>Agreement</h4>
+//         <p>REWARDIFY Partner Agreement</p>
+//         <hr className={styles.solid_line} />
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default StoreDataNav;
+
+import { useLocation, useNavigate } from 'react-router-dom';
+import styles from './index.module.css';
+
+const StoreDataNav = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  
+  // Conditionally apply green color to circles based on the current path
+  const storeinfocircle =
+    location.pathname === '/storeCreation' ||
+    location.pathname === '/storeCreation/storedocs' ||
+    location.pathname === '/storeCreation/storeAgreement'
+      ? styles.circle_green
+      : styles.circle;
+
+  const storedoccircle =
+    location.pathname === '/storeCreation/storedocs' ||
+    location.pathname === '/storeCreation/storeAgreement'
+      ? styles.circle_green
+      : styles.circle;
+
+  const storeagreecircle =
+    location.pathname === '/storeCreation/storeAgreement'
+      ? styles.circle_green
+      : styles.circle;
+
+  return (
+    <div className={styles.store_create_form_navigator}>
+      {/* Step 1 */}
+      <div>
+        <div className={storeinfocircle} />
+        <hr className={styles.dotted_line} />
+      </div>
+      <div onClick={() => navigate('/storeCreation')}>
+        <h6>Step 1</h6>
+        <h4>Store Information</h4>
+        <p>Owner name, Store location, Store address</p>
+        <hr className={styles.solid_line} />
+      </div>
+
+      {/* Step 2 */}
+      <div>
+        <div className={storedoccircle} />
+        <hr className={styles.dotted_line} />
+      </div>
+      <div onClick={() => navigate('/storeCreation/storedocs')}>
+        <h6>Step 2</h6>
+        <h4>Store Document</h4>
+        <p>GSTIN Number, PAN Number, Bank details</p>
+        <hr className={styles.solid_line} />
+      </div>
+
+      {/* Step 3 */}
+      <div>
+        <div className={storeagreecircle} />
+        <hr className={styles.dotted_line} />
+      </div>
+      <div onClick={() => navigate('/storeCreation/storeAgreement')}>
+        <h6>Step 3</h6>
+        <h4>Agreement</h4>
+        <p>REWARDIFY Partner Agreement</p>
+        <hr className={styles.solid_line} />
+      </div>
+    </div>
+  );
+};
+
+export default StoreDataNav;
+
+

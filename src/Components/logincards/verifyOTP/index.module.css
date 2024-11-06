@@ -86,3 +86,7 @@
     word-spacing: normal;
 }
 
+@media (max-width:400px) {
+    .login_verify_resend{
+        width: 80%;}
+}
